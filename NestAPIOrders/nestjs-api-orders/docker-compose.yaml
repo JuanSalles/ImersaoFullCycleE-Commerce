@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql:8.0.30-debian
+    container_name: mysql-debian
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nest
+    ports: 
+      - 3308:3306
+    volumes:
+      - .docker/mysql:/var/lib/mysql
+      
